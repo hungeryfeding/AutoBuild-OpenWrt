@@ -75,12 +75,12 @@ jobs:
         temp-reserve-mb: 100
         root-reserve-mb: 1024
         
-    - name: Cache Toolchain
-      uses: HiGarfield/cachewrtbuild@main
-      with:
-        ccache: false
-        mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
-        prefix: ${{ env.OPENWRT_PATH }}  
+  #  - name: Cache Toolchain
+  #    uses: HiGarfield/cachewrtbuild@main
+   #   with:
+   #     ccache: false
+   #     mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
+  #      prefix: ${{ env.OPENWRT_PATH }}  
         
     - name: Clone source code
       env: 
@@ -128,7 +128,7 @@ jobs:
       working-directory: ./openwrt
       run: |
         echo -e "$(nproc) thread build."
-        make -j2 V=s
+        make -j$(nproc) V=s
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
