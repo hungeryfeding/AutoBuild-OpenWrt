@@ -101,6 +101,8 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
         ./scripts/feeds install lang/ruby
+        ./scripts/feeds update helloworld
+        ./scripts/feeds install -a -f -p helloworld
 
    # - name: Import external feeds - passwall
    #   working-directory: ./openwrt
