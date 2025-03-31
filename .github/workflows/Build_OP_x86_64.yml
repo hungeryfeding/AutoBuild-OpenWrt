@@ -100,6 +100,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        ./scripts/feeds install lang/ruby
 
    # - name: Import external feeds - passwall
    #   working-directory: ./openwrt
