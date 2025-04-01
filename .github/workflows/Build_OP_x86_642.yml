@@ -96,7 +96,7 @@ jobs:
         ccache: 'true'
         mixkey: 'ramips'
         prefix: 'openwrt'
-	
+
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
