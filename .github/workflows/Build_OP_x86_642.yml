@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_x86_642
+name: Build_x86_642futher
 
 # Add a button to trigger the workflow
 on: 
